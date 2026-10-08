@@ -1,0 +1,9 @@
+model_name_or_path: /home/stormai/userfile1/shiqiuchang/sqc/LLaMA-Factory/Meta-Llama-3-8B-Instruct
+adapter_name_or_path: /home/stormai/userfile1/zhaoziru/compselect_output/truncator/hotpotqa/checkpoint-1500
+template: llama3
+finetuning_type: lora
+
+export_dir: /home/stormai/userfile1/zhaoziru/compselect_output/truncator/hotpotqa_merged
+export_size: 5
+export_device: cpu
+export_legacy_format: false

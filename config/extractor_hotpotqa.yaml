@@ -1,0 +1,47 @@
+### model
+model_name_or_path: /home/stormai/userfile1/shiqiuchang/sqc/LLaMA-Factory/Meta-Llama-3-8B-Instruct
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_rank: 64
+lora_alpha: 128
+lora_target: all
+
+### dataset
+dataset: compselect_hotpotqa_extractor
+dataset_dir: /home/stormai/userfile1/zhaoziru/LLaMA-Factory/data
+template: llama3
+cutoff_len: 4096
+max_samples: 12000
+overwrite_cache: true
+preprocessing_num_workers: 12
+dataloader_num_workers: 4
+
+### output
+output_dir: /home/stormai/userfile1/zhaoziru/compselect_output/extractor/hotpotqa
+logging_steps: 1
+save_steps: 50
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: false
+report_to: none
+
+### train
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 1.0e-4
+num_train_epochs: 3.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+
+### eval
+val_size: 0.1
+per_device_eval_batch_size: 1
+eval_strategy: steps
+eval_steps: 50

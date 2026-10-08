@@ -31,8 +31,10 @@ def parse_args():
 
 
 def load_llama(model_name):
+    base_tokenizer_path = "/home/stormai/userfile1/shiqiuchang/sqc/LLaMA-Factory/Meta-Llama-3-8B-Instruct"
+
     tokenizer = AutoTokenizer.from_pretrained(
-        model_name,
+        base_tokenizer_path,
         trust_remote_code=True,
     )
     tokenizer.pad_token = tokenizer.eos_token
@@ -62,18 +64,20 @@ def get_extract_sentences(query, docs, tokenizer, model):
     tokenized = tokenizer.apply_chat_template(
         messages,
         add_generation_prompt=True,
+        tokenize=True,
         return_tensors="pt",
+        return_dict=True,
         padding=True,
         truncation=True,
-        max_length=2048,
+        max_length=4096,
     )
 
-    input_ids = tokenized.to(model.device)
-    if isinstance(input_ids, dict):
-        attention_mask = input_ids["attention_mask"]
-        input_ids = input_ids["input_ids"]
+    input_ids = tokenized["input_ids"].to(model.device)
+
+    if "attention_mask" in tokenized:
+        attention_mask = tokenized["attention_mask"].to(model.device)
     else:
-        attention_mask = (input_ids != tokenizer.pad_token_id).long()
+        attention_mask = torch.ones_like(input_ids, dtype=torch.long)
 
     pad_token_id = tokenizer.pad_token_id or tokenizer.eos_token_id
 
@@ -86,8 +90,8 @@ def get_extract_sentences(query, docs, tokenizer, model):
         outputs = model.generate(
             input_ids=input_ids,
             attention_mask=attention_mask,
-            max_new_tokens=256,
-            do_sample=True,
+            max_new_tokens=512,
+            do_sample=False,
             temperature=0.01,
             pad_token_id=pad_token_id,
             eos_token_id=terminators,

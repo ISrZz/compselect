@@ -29,10 +29,23 @@ def load_model(model_name, torch_dtype, device_map):
     return model, tokenizer
 
 
-def clean_and_split_sentences(summary_list):
-    if isinstance(summary_list, list):
-        return summary_list
-    return [s.strip() for s in summary_list.split(".") if s.strip()]
+def clean_and_split_sentences(summary):
+    if isinstance(summary, list):
+        return summary
+
+    results = []
+
+    for line in summary.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+
+        if ": " in line and line.lower().startswith("sentence "):
+            line = line.split(": ", 1)[1]
+
+        results.append(line)
+
+    return results
 
 
 def load_qa_documents(data_path):
@@ -77,12 +90,39 @@ def get_answer(
         max_length=max_length,
     )
 
-    input_ids = tokenized.to(model.device)
-    if isinstance(input_ids, dict):
-        attention_mask = input_ids["attention_mask"]
-        input_ids = input_ids["input_ids"]
+    tokenized = tokenizer.apply_chat_template(
+        messages,
+        add_generation_prompt=True,
+        return_tensors="pt",
+        padding=True,
+        truncation=True,
+        max_length=max_length,
+    )
+
+    if hasattr(tokenized, "input_ids"):
+        input_ids = tokenized.input_ids.to(model.device)
+
+        attention_mask = getattr(tokenized, "attention_mask", None)
+        if attention_mask is None:
+            attention_mask = torch.ones_like(input_ids)
+        else:
+            attention_mask = attention_mask.to(model.device)
+
+    elif torch.is_tensor(tokenized):
+        input_ids = tokenized.to(model.device)
+        attention_mask = torch.ones_like(input_ids)
+
+    elif isinstance(tokenized, dict):
+        input_ids = tokenized["input_ids"].to(model.device)
+        attention_mask = tokenized.get("attention_mask")
+
+        if attention_mask is None:
+            attention_mask = torch.ones_like(input_ids)
+        else:
+            attention_mask = attention_mask.to(model.device)
+
     else:
-        attention_mask = (input_ids != tokenizer.pad_token_id).long()
+        raise TypeError(f"Unexpected tokenizer output: {type(tokenized)}")
 
     pad_token_id = tokenizer.pad_token_id or tokenizer.eos_token_id
     terminators = [
@@ -128,8 +168,10 @@ def adaptive_truncate(
 
         final_subset = []
         found = False
-        for k in range(len(summary), 0, -1):
+
+        for k in range(1, len(summary) + 1):
             subset = summary[:k]
+
             ans = get_answer(
                 subset,
                 question=question,
@@ -139,6 +181,7 @@ def adaptive_truncate(
                 max_new_tokens=max_new_tokens,
                 temperature=temperature,
             )
+
             score = sub_exact_match(ans, answer)
 
             if score == 1.0:

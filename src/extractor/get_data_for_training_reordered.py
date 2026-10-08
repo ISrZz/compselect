@@ -1,7 +1,7 @@
 import json
 import os
 
-path =  "/home/stormai/userfile1/zhaoziru/compselect_data/extractor/hotpotqa_train_eps0_originalsort.jsonl"  # specify your input file path here
+path =  "/home/stormai/userfile1/zhaoziru/compselect_data/extractor/hotpotqa_train_eps0_reordered.jsonl"  # specify your input file path here
 data = [json.loads(line.strip()) for line in open(path, "r")]
 
 final_data = []

@@ -74,16 +74,15 @@ def main():
 
     model = None
 
-    if args.threshold != 0.0:
-        from sentence_transformers import SentenceTransformer
+    from sentence_transformers import SentenceTransformer
 
-        model_path = "sentence-transformers/all-MiniLM-L6-v2"
-        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model_path = "sentence-transformers/all-MiniLM-L6-v2"
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-        model = SentenceTransformer(model_path)
+    model = SentenceTransformer(model_path)
 
-        if torch.cuda.is_available():
-            model = model.to(device)
+    if torch.cuda.is_available():
+        model = model.to(device)
 
     with open(args.input, "r", encoding="utf-8") as f:
         data = [json.loads(line.strip()) for line in f]
@@ -99,26 +98,31 @@ def main():
             sentences.extend(split_into_sentences(doc))
 
         result = finding_sentence(answer, sentences)
+
         if not result:
             continue
-        all_number += 1
-        if args.threshold != 0.0:
 
+        all_number += 1
+
+        if args.threshold != 0.0:
             filtered_results = filter_sentences_by_similarity(
-                model, result, sentences, threshold=args.threshold
+                model,
+                result,
+                sentences,
+                threshold=args.threshold,
             )
+
             if len(result) != len(filtered_results):
                 number += 1
-
         else:
             filtered_results = result
 
-        if args.threshold == 0.0:
-            final_filtered_result = filtered_results
-        else:
-            final_filtered_result = sorted_sentences(
-                model, item["question"], filtered_results
-            )
+        # 关键：无论 threshold 是否为 0，都排序
+        final_filtered_result = sorted_sentences(
+            model,
+            item["question"],
+            filtered_results,
+        )
 
         with open(args.output, "a+", encoding="utf-8") as f_out:
             res = {

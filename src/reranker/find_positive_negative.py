@@ -102,13 +102,33 @@ def get_answer(documents, question, model, tokenizer):
         max_length=3096,
     )
 
-    input_ids = tokenized.to(model.device)
+    # Newer transformers may return BatchEncoding instead of a plain Tensor.
+    if hasattr(tokenized, "input_ids"):
+        input_ids = tokenized.input_ids.to(model.device)
 
-    if isinstance(input_ids, dict):
-        attention_mask = input_ids["attention_mask"]
-        input_ids = input_ids["input_ids"]
+        attention_mask = getattr(tokenized, "attention_mask", None)
+        if attention_mask is None:
+            attention_mask = torch.ones_like(input_ids)
+        else:
+            attention_mask = attention_mask.to(model.device)
+
+    elif torch.is_tensor(tokenized):
+        input_ids = tokenized.to(model.device)
+        attention_mask = torch.ones_like(input_ids)
+
+    elif isinstance(tokenized, dict):
+        input_ids = tokenized["input_ids"].to(model.device)
+
+        if "attention_mask" in tokenized:
+            attention_mask = tokenized["attention_mask"].to(model.device)
+        else:
+            attention_mask = torch.ones_like(input_ids)
+
     else:
-        attention_mask = (input_ids != tokenizer.pad_token_id).long()
+        raise TypeError(
+            f"Unexpected tokenizer output type: {type(tokenized)}"
+        )
+
 
     pad_token_id = tokenizer.pad_token_id or tokenizer.eos_token_id
     terminators = [

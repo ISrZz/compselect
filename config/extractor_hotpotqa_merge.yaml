@@ -1,0 +1,11 @@
+### model
+model_name_or_path: /home/stormai/userfile1/shiqiuchang/sqc/LLaMA-Factory/Meta-Llama-3-8B-Instruct
+adapter_name_or_path: /home/stormai/userfile1/zhaoziru/compselect_output/extractor/hotpotqa_full/checkpoint-500
+template: llama3
+trust_remote_code: true
+
+### export
+export_dir: /home/stormai/userfile1/zhaoziru/compselect_output/extractor/hotpotqa_merged
+export_size: 5
+export_device: cpu
+export_legacy_format: false
