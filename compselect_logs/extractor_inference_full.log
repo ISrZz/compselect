@@ -1,0 +1,109 @@
+nohup: 忽略输入
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   0%|          | 1/291 [00:00<03:27,  1.40it/s]Loading weights:   5%|▌         | 15/291 [00:00<00:11, 24.50it/s]Loading weights:   8%|▊         | 24/291 [00:00<00:07, 36.52it/s]Loading weights:  11%|█▏        | 33/291 [00:01<00:05, 47.74it/s]Loading weights:  14%|█▍        | 42/291 [00:01<00:04, 57.43it/s]Loading weights:  18%|█▊        | 52/291 [00:01<00:03, 67.99it/s]Loading weights:  23%|██▎       | 66/291 [00:01<00:02, 86.78it/s]Loading weights:  26%|██▋       | 77/291 [00:01<00:02, 76.80it/s]Loading weights:  31%|███       | 90/291 [00:01<00:02, 89.62it/s]Loading weights:  35%|███▌      | 103/291 [00:01<00:02, 86.92it/s]Loading weights:  40%|███▉      | 116/291 [00:01<00:01, 95.71it/s]Loading weights:  44%|████▍     | 129/291 [00:01<00:01, 104.23it/s]Loading weights:  48%|████▊     | 141/291 [00:02<00:01, 96.67it/s] Loading weights:  53%|█████▎    | 154/291 [00:02<00:01, 105.09it/s]Loading weights:  57%|█████▋    | 166/291 [00:02<00:01, 93.21it/s] Loading weights:  60%|██████    | 176/291 [00:02<00:01, 87.33it/s]Loading weights:  64%|██████▍   | 186/291 [00:02<00:01, 86.42it/s]Loading weights:  67%|██████▋   | 195/291 [00:02<00:01, 86.61it/s]Loading weights:  73%|███████▎  | 211/291 [00:02<00:00, 88.59it/s]Loading weights:  79%|███████▊  | 229/291 [00:03<00:00, 99.03it/s]Loading weights:  82%|████████▏ | 239/291 [00:03<00:00, 95.16it/s]Loading weights:  86%|████████▌ | 249/291 [00:03<00:00, 95.56it/s]Loading weights:  91%|█████████ | 265/291 [00:03<00:00, 98.01it/s]Loading weights:  95%|█████████▍| 276/291 [00:03<00:00, 99.02it/s]Loading weights: 100%|██████████| 291/291 [00:03<00:00, 80.00it/s]
+  0%|          | 0/90447 [00:00<?, ?it/s][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+  0%|          | 1/90447 [00:05<129:05:12,  5.14s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 2/90447 [00:07<89:04:29,  3.55s/it] [transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 3/90447 [00:09<68:12:13,  2.71s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 4/90447 [00:11<67:58:56,  2.71s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 5/90447 [00:12<51:19:47,  2.04s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 6/90447 [00:13<43:07:36,  1.72s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 7/90447 [00:14<37:14:52,  1.48s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 8/90447 [00:17<45:49:50,  1.82s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 9/90447 [00:19<45:04:37,  1.79s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 10/90447 [00:20<43:12:54,  1.72s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 11/90447 [00:22<42:10:34,  1.68s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 12/90447 [00:23<38:37:01,  1.54s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 13/90447 [00:28<64:00:48,  2.55s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 14/90447 [00:29<51:46:37,  2.06s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 15/90447 [00:30<43:48:24,  1.74s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 16/90447 [00:32<46:28:11,  1.85s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 17/90447 [00:35<54:12:40,  2.16s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 18/90447 [00:36<49:51:11,  1.98s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 19/90447 [00:44<92:13:48,  3.67s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 20/90447 [00:45<71:07:54,  2.83s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 21/90447 [00:46<59:10:33,  2.36s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 22/90447 [00:48<52:03:26,  2.07s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 23/90447 [00:55<93:56:04,  3.74s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 24/90447 [00:57<80:17:46,  3.20s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 25/90447 [00:58<63:06:52,  2.51s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 26/90447 [00:59<50:41:27,  2.02s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 27/90447 [01:02<60:31:03,  2.41s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Sentence 1: Arthur's Lady's Home Magazine
+fashion plates are not quite such extravagant caricatures of rag-baby work as are usually met with in some of the more fancy magazines."
+Sentence 2: Arthur's Lady's Home Magazine Arthur's Home Magazine (1852-ca.1898) or Ladies' Home Magazine was an American periodical published in Philadelphia by Timothy Shay Arthur.
+Sentence 3: Arthur's Lady's Home Magazine
+Arthur's Lady's Home Magazine Arthur's Home Magazine (1852-ca.1898) or Ladies' Home Magazine was an American periodical published in Philadelphia by Timothy Shay Arthur.
+Sentence 1: The Oberoi Group
+The Oberoi Group The Oberoi Group is a hotel group with its head office in Delhi.
+Sentence 2: The foundations of the Oberoi Group date back to 1934 when Rai Bahadur Mohan Singh Oberoi, the founder of the group, bought two properties: the Maidens in Delhi and the Clarke's in Shimla.
+Sentence 1: Milhouse Van Houten Milhouse Mussolini Van Houten is a fictional character in the animated television series "The Simpsons", voiced by Pamela Hayden, and created by Matt Groening who named the character after President Richard Nixon's middle name.
+Sentence 1: In 2007, about 1 in every 25 Americans were named Smith, Johnson, Williams, Brown, Jones, Miller or Davis.
+Sentence 2: Jenny Levy Miller
+Jenny Levy Miller Jenny Miller, née Jenny Levy (born 1906, date of death unknown), was an American journalist.
+Sentence 3: The Millers were married in the American Embassy in Moscow in December 1935.
+Sentence 1: It is a hygroscopic solid that is highly soluble in water and slightly soluble in alcohol.
+Sentence 1: Jim Courier
+Jim Courier James Spencer Courier Jr. (born August 17, 1970) is an American former world No.
+Sentence 1: Moth
+("Antheraea assamensis"), and the Japanese silk moth ("Antheraea yamamai").
+Sentence 1: Wanderlei Silva
+Wanderlei Silva Wanderlei César da Silva ( ; ; ; born July 3, 1976), nicknamed "The Axe Murderer" and ""Cachorro Louco"" (Portuguese for "mad dog"), is a Brazilian / American mixed martial artist who has competed in Japan's Pride Fighting Championships and the American-based Ultimate Fighting Championship (UFC).
+Sentence 1: It first aired in September 2006 and the last episode was broadcast on December 4, 2009.
+Sentence 2: It first aired in September 2006 and the last episode was broadcast on December 4, 2009.
+Sentence 1: 2013 Supercheap Auto Bathurst 1000
+seconds was a new record for a full 1,000-kilometre event, beating the previous record set in 2010 by 84 seconds.
+Sentence 1: Vocals are handled by Aesop Rock, with guest appearances from Camu Tao and Metro of S.A. Smash and Definitive Jux label head El-P. All scratches are performed by DJ Big Wiz.
+Sentence 1: Gunslinger Sean Lafferty (Paul Gross), known as the Montana Kid, has a bounty on his head for killing eleven people across the western United States.
+Sentence 1: Die Rhöner Säuwäntzt
+Die Rhöner Säuwäntzt Die Rhöner Säuwäntzt are a Skiffle-Bluesband from Eichenzell-Lütter in Hessen, Germany.
+Sentence 2: Die Rhöner Säuwäntzt
+has played at regional festivals and events in Germany.
+Sentence 3: Die Rhöner Säuwäntzt
+anti-wind power activists in Germany after having been started on soundcloud.
+Sentence 4: Die Rhöner Säuwäntzt Die Rhöner Säuwäntzt are a Skiffle-Bluesband from Eichenzell-Lütter in Hessen, Germany.
+Sentence 1: Smith was named the Most Valuable Player of Super Bowl XLVIII after they defeated the Denver Broncos.
+Sentence 1: U.S. Route 66
+of the criss-crossing of a horse-drawn wagon and an automobile.
+Sentence 1: Winningham finished the 1980s with two Hollywood films: the nuclear disaster drama, "Miracle Mile" (1988), for which she received an Independent Spirit Award nomination in 1989, and the Tom Hanks vehicle "Turner & Hooch" in 1989.
+Sentence 1: The Playbills, which describe the musical as having "explosions, negligible storytelling, camouflage and tits", also state that the musical's cast included actors such as Taye Diggs (who would go on to play the role of Hedwig in the summer of 2015) and that the music was written by Metallica and Stephen R. Schwartz, which is the real name of "Hedwig" songwriter Stephen Trask.
+Sentence 1: A Is for Answers
+A Is for Answers "A Is for Answers" is the twenty-fourth episode of the fourth season and the ninety-fifth episode of the ABC Family mystery drama series "Pretty Little Liars".
+Sentence 1: Lipa performed at the Indonesian TV channel's birthday SCTV and was awarded as Young and Promising International Artist at the SCTV Music Awards in May 2017.
+Sentence 2: Her self-titled debut studio album was released on 2 June 2017.
+Sentence 3: It was released on 2 June 2017 by Warner Bros. Records.
+Sentence 4: scope="row"| Portugal (AFP) New Rules (song) "New Rules" is a song by English singer Dua Lipa from her eponymous debut studio album (2017).
+Sentence 5: It was released to contemporary hit radio in the United Kingdom on 15 July 2017 as the album's sixth single.
+Sentence 6: As of December 2017, the album had sold 1.2 million units worldwide.
+Sentence 7: It was released on 2 June 2017 by Warner Bros. Records.
+Sentence 8: In March 2017, Lipa scored three simultaneous top 15 singles in the United Kingdom with "No Lie" (a collaboration with Sean Paul), "Be the One" and "Scared to Be Lonely" (with Martin Garrix).
+Sentence 9: That year, the
+Sentence 1: Cortez Masto declined to run for Governor of Nevada in the 2014 election.
+Sentence 1: States include Alabama, Florida, Georgia, Indiana, Kansas, Kentucky, Louisiana, Mississippi, Missouri, North Carolina, South Carolina, Tennessee, and Virginia.
+Sentence 1: In November 1976, Moynihan was elected to the U.S. Senate from the State of New York, defeating U.S. Representative Bella Abzug, former U.S.
+Sentence 1: Hole (band)
+Hole (band) Hole was an American alternative rock band formed by singer and guitarist Courtney Love and lead guitarist Eric Erlandson in Los Angeles, California in 1989.
+Sentence 2: Hole (band)
+Courtney's voice and lyrics."
+Sentence 3: Hole's first show took place at Raji's, a small bar in Hollywood, in September 1989.
+Sentence 4: Hole released their no wave-influenced debut single "Retard Girl" in April 1990, and followed it with "Dicknail" in 1991, released on Sympathy for the Record Industry and Sub Pop, respectively.
+Sentence 5: Love named the band Hole after a line from Euripides' "Medea" ("There is a hole that pierces right through me") as well as a conversation she had had with her mother, in which she told her that she couldn't live
+Sentence 6: Hole (band)
+others' guts.
+Sentence 7: Initially, Hole drew inspiration from no wave and experimental bands, which is evident in their earliest recordings, specifically "Retard Girl", but frontwoman Love also drew from a variety of influences.
+Sentence 8: Hole (
+Sentence 1: In "Joshua and Margaret Investigations", in the flashback of the day Jake was born, it also mentioned the events that occurred after Flame Princess's birth in "Earth & Water" happened on the same day, meaning that Jake would be 16 years old in human years.
+Sentence 1: Julia suspected Heihachi and entered the King of Iron Fist Tournament 3 to seek the truth.
+Sentence 1: ... That's not to say the movie, directed by James Foley, is badly made.
+Sentence 1: It helped jump start the careers of several young performers including Paul Lynde, Alice Ghostley, Eartha Kitt, Robert Clary, Carol Lawrence, Ronny Graham, performer/writer Mel Brooks (as Melvin Brooks), and lyricist Sheldon Harnick.
+Sentence 2: Ronny Graham, Eartha Kitt, Robert Clary, Alice Ghostley, June Carroll, Virginia De Luce, Carol Lawrence, Patricia Hammerlee, Paul Lynde, and Bill Millikin repeated their stage roles.
+Sentence 1: Saul Bellow, the Nobel Prize–winning novelist, responded to "The Education" by using Navrozov as the model for a modern Russian dissident thinker in two of his books, thereby beginning a lively correspondence that continued until the American novelist's death.
+Sentence 2: Zinovy Peshkov
+the sons, born in 1884, was followed by Yaakov, the future partner of Lenin.
+Sentence 3: These include, other than Sarah, Zinovy, Sophie (who died in 1951 in Saratov), Veniamin, Sore (died in 1964), Lev (died in 1914 in Russia), Benjamin (died in 1940 in the United States.
+Sentence 4: Reluctant to pursue his studies, prepared from adolescence for any adventure, the young Zinovy trolled the streets of Nijni Novgorod on the fringes of legality, spending his time with
+Sentence 5: Dmitry Galkovsky
+although Rozanov provided the main inspiration for Galkovsky's work, he is only one of many subjects discussed in the third part of "The Infinite Deadlock".
+Sentence 6: "Such evidence was increasingly distrusted  0%|          | 28/90447 [01:10<100:09:09,  3.99s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  0%|          | 29/90447 [01:18<127:23:41,  5.07s/it][transformers] Both `max_new_tokens` (=256) and `max_length`(=4096) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
